@@ -2731,6 +2731,29 @@ console.log(user.id); // 1
             }
         }, 150);
 
+        // Restore navigation functions
+        function previousLesson() {
+            if (currentLesson > 0) {
+                debouncedShowLesson(currentLesson - 1);
+            }
+        }
+
+        function nextLesson() {
+            if (currentLesson < lessons.length - 1) {
+                debouncedShowLesson(currentLesson + 1);
+            }
+        }
+
+        // Update the runCode function to use the debounced version
+        function runCode() {
+            debouncedRunCode();
+        }
+
+        // Update the showLesson function to use the debounced version
+        function showLesson(index) {
+            debouncedShowLesson(index);
+        }
+
         function updateNavButtons() {
             try {
                 if (!domCache.prevBtn || !domCache.nextBtn) {
