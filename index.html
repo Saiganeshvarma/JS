@@ -156,7 +156,8 @@
             background: #1e1e1e;
             color: #f8f8f2;
             padding: 20px;
-            height: 400px;
+            min-height: 100px;
+            max-height: 600px;
             border-radius: 10px;
             margin: 20px 0;
             font-family: 'Courier New', monospace;
@@ -165,6 +166,7 @@
             white-space: pre-wrap;
             overflow-y: auto;
             line-height: 1.5;
+            height: auto;
         }
 
         .code-example::before {
@@ -1437,8 +1439,7 @@ export const subtract = (a, b) => a - b;
 export default class Calculator {
     multiply(a, b) {
         return a * b;
-    }
-}</div>
+    }}</div>
                     <div class="lesson-text">
                         <strong>Importing:</strong>
                     </div>
